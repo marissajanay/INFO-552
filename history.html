@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Shrikhand&display=swap" rel="stylesheet">
+<title>History</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Cabin", sans-serif;
+  transition: background-color .5s;
+  background-color: black;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1c1919;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a, .dropdown-btn {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #115AAC;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+.active {
+  background-color: #FACF08;
+  color: white;
+}
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+h1 {
+  top: 0;
+  text-align: center;
+  color: #E81828;
+  width: 100%;
+  padding: 20px;
+  font-family: Shrikhand;
+  font-size: 90px;
+}
+.logo{
+  position: absolute;
+  z-index: -1;
+    top: 0;     
+    right: 0;    
+    height: 10%;   
+    width: auto;    
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+   <button class="dropdown-btn">Who We Are 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="about.html">About Us</a>
+    <a href="history.html">History</a>
+  </div>
+  <button class="dropdown-btn">Get Outside
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="wheretoskate.html">Where to Skate</a>
+    <a href="findgear.html">Find Gear</a>
+  </div>
+   <button class="dropdown-btn">Events 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="classes.html">Classes</a>
+    <a href="competitions.html">Competitions</a>
+  </div>
+  <button class="dropdown-btn">Out In the World 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="gallery.html">Gallery</a>
+    <a href="inthenews.html">In the News</a>
+  </div>
+</div>
+
+<div id="main">
+  <span style="color: #E81828; font-size: 350%; margin-left: 5%; cursor:pointer;" onclick="openNav();">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "black";
+}
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+<h1> History </h1>
+<center><img src="oldlove.jpg" style="width: 70vw; height: 60vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;" ></center>
+<p style="font-weight: bold; font-size: 22px; text-align: left; padding-top: 50px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;"> Although Philly skate culture has been heavily influenced by 
+  the urban landscape, the relationship between skateboarders and the city has historically been contentious. As the city's landscape and perception of skateboarding has shifted over the years, Philly skaters continue their tradition of making of it work.  </p>
+<br>
+<p style="font-weight: bold; font-size: 30px; font-family:shrikhand; text-align: left; padding-top: 50px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;color:#115AAC">The Heyday</p>
+<p style="font-weight: bold; font-size: 22px; text-align: left; padding-top: 20px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;">The 1990s and early 2000s are considered the golden age of street skating in Philadelphia. The architectual plaza styles of City Hall, Love Park, and the Municipal building at the time were a centralized trifecta of perfect streetstyle skating ground.
+    Made up of sunken plazas, staircases, pits, and ledges, the type of skating made possible would define a skate style unique to Philadelphia. Skateboard videos like the iconic Static series coming out of Philadelphia at the time led to the city becoming a global street skate destination. The X Games held their first skateboard street competition in Philadelphia in 2001 further cementing Philly's skate city status.  </p>
+  <a href="https://www.youtube.com/watch?v=Gvp7UxsWZ10" style="display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;color: white;"> Click Here to Watch</a>  
+
+<p style="font-weight: bold; font-size: 30px; font-family:shrikhand; text-align: left; padding-top: 65px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;color:#115AAC">The Trouble Years</p>
+<p style="font-weight: bold; font-size: 22px; text-align: left; padding-top: 20px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;">The early 2000s to 2010s saw a significant pushback from the city. Skateboarders were labelled a nuisance and city officials actively worked to push skaters out of Center City as they worked to reinvent it. Skaters could now be fined steeply if they were caught. As City Hall and Love Park were redesigned in 2014 and 2016 to be less
+  skateable, even the city planner, Ed Bacon, responsible for Love Park went to protest at the age of 92.   </p>
+  <a href="https://www.youtube.com/watch?v=GQsFfvDwOrk" style="display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;color: white;"> Click Here to Watch</a>  
+
+<p style="font-weight: bold; font-size: 30px; font-family:shrikhand; text-align: left; padding-top: 65px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;color:#115AAC">The Modern Era</p>
+<p style="font-weight: bold; font-size: 22px; text-align: left; padding-top: 20px; display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;">The 2010s to current day mark an era of skaters actively pushing back to reclaim skate spots around the city. FDR Park which is a DIY skatepark built by volunteers continues to grow and thrive. Paine's Park by the art museum was created by the Franklin Paine's Skatepark Fund in collaboration with the 
+  city to create a legal, dedicated skatepark to make up for the loss of Love Park. Parts of Love Park were also salvaged by Philly skaters during demolition and have been repurposed to build other skate spots both locally and around the world. One of the most prominent reuse of materials can be seen in the redesigned Thomas Paine Plaza that reopened in 2026 where Philly skaters worked with the mayor to create a designated skating location. </p>
+  <a href="https://www.youtube.com/shorts/GsmZqfZDnQo" style="display: flex; justify-content: center; padding-left: 20%; padding-right: 20%;padding-bottom: 5%;color: white;"> Click Here to Watch</a>  
+<div>
+  <div class="logo">
+  <img src="Skate Philly.png" style=" padding-left: 85%; width: 9%;">
+</div>
+</body>
+</html>  

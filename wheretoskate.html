@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Shrikhand&display=swap" rel="stylesheet">
+<title>Where To Skate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  font-family: "Cabin", sans-serif;
+  transition: background-color .5s;
+  background-color: black;
+  color: white;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #1c1919;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a, .dropdown-btn {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #115AAC;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.main {
+  padding: 16px;
+}
+.active {
+  background-color: #FACF08;
+  color: white;
+}
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .column {
+    width: 100%;}
+}
+h1 {
+  top: 0;
+  text-align: center;
+  color: #E81828;
+  width: 100%;
+  padding: 20px;
+  font-family: Shrikhand;
+  font-size: 70px;
+}
+
+.column {
+  float: left;
+  
+  text-align: left;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.column.side {
+  width: 30%;
+  margin-left: 25%;
+}
+.column.main {
+  width: 70%
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo{
+  position: absolute;
+  z-index: -1;
+    top: 0;     
+    right: 0;    
+    height: 10%;   
+    width: auto;    
+}
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+   <button class="dropdown-btn">Who We Are 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="about.html">About Us</a>
+    <a href="history.html">History</a>
+  </div>
+  <button class="dropdown-btn">Get Outside
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="wheretoskate.html">Where to Skate</a>
+    <a href="findgear.html">Find Gear</a>
+  </div>
+   <button class="dropdown-btn">Events 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="classes.html">Classes</a>
+    <a href="competitions.html">Competitions</a>
+  </div>
+  <button class="dropdown-btn">Out In the World 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="gallery.html">Gallery</a>
+    <a href="inthenews.html">In the News</a>
+  </div>
+</div>
+
+<div id="main">
+  <span style="color: #E81828; font-size: 350%; margin-left: 5%; cursor:pointer;" onclick="openNav();">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.body.style.backgroundColor = "black";
+}
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+<h1> Where To Skate </h1>
+<br>
+<center><img src="FDR2.jpg" style="width: 70vw; height: 50vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;padding-bottom: 3%;" ></center>
+<center><div class="row">
+  <div class="column side">
+    <h2>FDR Park</h2>
+  </div>
+  
+  <div class="column middle">
+    <p>Address: Pattison Avenue, Philadelphia, PA </p>
+    <p>Size: 16,000 sq. ft. </p>
+    <p>Description: full pipe, bowl, ledge, quarter pipe, rail</p>
+  </div></center>
+<center><img src="9thAndPoplar.jpg" style="width: 70vw; height: 50vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;padding-bottom: 3%;" ></center>
+<div class="row">
+  <div class="column side">
+    <h2>9th & Poplar</h2>
+  </div>
+  
+  <div class="column middle">
+    <p>Address: North 9th Street, Philadelphia, PA</p>
+    <p>Size: 23,600 sq. ft.</p>
+    <p>Description: bank, curb, rail, ledge, ramp, quarter pipe</p>
+  </div>
+  <center><img src="FrontSt.jpg" style="width: 70vw; height: 50vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;padding-bottom: 3%;" ></center>
+<div class="row">
+  <div class="column side">
+    <h2>Front Street Skatepark</h2>
+  </div>
+  
+  <div class="column middle">
+    <p>Address: 1101 South Front Street, Philadelphia, PA</p>
+    <p>Size: 11,650 sq. ft.</p>
+    <p>Description: quarter pipe, ledges</p>
+  </div>
+  <center><img src="GraysFerry.jpg" style="width: 70vw; height: 50vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;padding-bottom: 3%;" ></center>
+<div class="row">
+  <div class="column side">
+    <h2>Grey's Ferry Crescent Skatepark</h2>
+  </div>
+  
+  <div class="column middle">
+    <p>Address: 3600 Grays Ferry Ave., Philadelphia, PA</p>
+    <p>Size: 3,000 sq. ft. </p>
+    <p>Description: quarter pipe, concrete</p>
+  </div>
+  <center><img src="Paines2.jpg" style="width: 70vw; height: 50vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;padding-bottom: 3%;" ></center>
+<div class="row">
+  <div class="column side">
+    <h2>Paine's Park</h2>
+  </div>
+  
+  <div class="column middle">
+    <p>Address: Martin Luther King JR. Drive And & Benjamin Franklin </p>
+    <p>Parkway, Philadelphia, PA 19130 </p>
+    <p>Size: 30,000 sq. ft.</p>
+    <p>Description: quarter pipe, wedge, curb, ledge, handrail ramp,</p>
+    <p> stairs, concrete, brick</p>
+  </div>
+  <center><img src="thomasplaza.jpg" style="width: 70vw; height: 50vh; border-radius: 15px; padding-left: 7%;padding-right: 7%;padding-bottom: 3%;" ></center>
+<div class="row">
+  <div class="column side">
+    <h2>Thomas Paine Plaza "Muni"</h2>
+  </div>
+  
+  <div class="column middle">
+    <p>Address: 1401 John F Kennedy Blvd, Philadelphia, PA</p>
+    <p>Size: unavailable </p>
+    <p>Description: benches, granite, domino </p>
+  </div>
+  <div>
+    <div class="logo">
+  <img src="Skate Philly.png" style=" padding-left: 85%; width: 9%;">
+</div>
+</body>
+</html>  

@@ -4,24 +4,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Shrikhand&display=swap" rel="stylesheet">
-<title>Home</title>
+<title>In the News</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Cabin", sans-serif;
   transition: background-color .5s;
   background-color: black;
+  color: white;
 }
 
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   top: 0;
   left: 0;
   background-color: #1c1919;
@@ -42,7 +39,6 @@ body {
   cursor: pointer;
   outline: none;
   transition: 0.3s;
- 
 }
 
 .sidenav a:hover, .dropdown-btn:hover {
@@ -58,12 +54,12 @@ body {
 }
 
 .main {
-  padding: 25px;
-  z-index: auto;
+  transition: margin-left .5s;
+  padding: 16px;
 }
 .active {
   background-color: #FACF08;
-  color: black;
+  color: white;
 }
 .dropdown-container {
   display: none;
@@ -79,28 +75,39 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-.content {
-  top: 5%;
+h1 {
+  top: 0;
   text-align: center;
   color: #E81828;
   width: 100%;
   padding: 20px;
   font-family: Shrikhand;
   font-size: 70px;
-  position: fixed;
-  z-index: 100;
 }
-#myVideo {
-  position: fixed;
-  z-index: -2;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  overflow: hidden;
-  object-fit: cover;
+.block {
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  outline-style: solid;
+  outline-width: 4px;
+  outline-color: #FACF08;
 }
-
+.container {
+  text-align: center;
+}
+.block img {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+.logo{
+  position: absolute;
+  z-index: -1;
+    top: 0;     
+    right: 0;    
+    height: 10%;   
+    width: auto;    
+}
 </style>
 </head>
 <body>
@@ -119,28 +126,25 @@ body {
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Where to Skate</a>
-    <a href="#">Find Gear</a>
+    <a href="wheretoskate.html">Where to Skate</a>
+    <a href="findgear.html">Find Gear</a>
   </div>
    <button class="dropdown-btn">Events 
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Classes</a>
-    <a href="#">Competitions</a>
+    <a href="classes.html">Classes</a>
+    <a href="competitions.html">Competitions</a>
   </div>
   <button class="dropdown-btn">Out In the World 
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Gallery</a>
-    <a href="#">In the News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="inthenews.html">In the News</a>
   </div>
 </div>
-<video autoplay muted loop id="myVideo">
-  <source src="skater.mp4" type="video/mp4">
-  Your browser does not support HTML5 video.
-</video>
+
 <div id="main">
   <span style="color: #E81828; font-size: 350%; margin-left: 5%; cursor:pointer;" onclick="openNav();">&#9776;</span>
 </div>
@@ -172,11 +176,52 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-<div class="content">
-  <h1>Skate Philly</h1>
+<h1> In The News </h1>
+<br>
+<div class="container">
+  <div class="block">
+    <h3>The Ultimate Pilgrimage for the Middle-Aged Skateboarder</h3>
+    <img src="malmo.jpg">
+    <p> Part of Philly's 90's skate spot rebuilt in Malmo</p>
+    <p> NY Times / Oct. 2025</p>
+    <br>
+    <a href="https://www.nytimes.com/2025/10/15/magazine/skateboarding-philadelphia-love-park-malmo-sweden.html" style="color: white; text-decoration: none ;border: 2px; outline: solid; outline-color: white; padding: 5px; ">Read More</a>
+  </div>
+
+  <div class="block">
+    <h3>Philadelphia's Thomas Paine Plaza reopens after $18 million renovation</h3>
+    <img src="muni.jpg">
+    <p> Thomas Paine Plaza reopens with dedicated skate area.</p>
+    <p> NBC 10 Philadelphia / Apr. 2026</p>
+    <br>
+        <a href="https://www.nbcphiladelphia.com/news/local/thomas-paine-plaza-reopens-renovations-philadelphia/4387694/" style="color: white; text-decoration: none ;border: 2px; outline: solid; outline-color: white; padding: 5px; ">Read More</a>
+  </div>
+
 </div>
+<br>
+<div class="container">
+  <div class="block">
+    <h3>Red Bull releases mini-documentary on Philly skateboarding scene</h3>
+    <img src="redbull.jpg">
+    <p> Find out why Philadelphia is considered a mecca of street skating</p>
+    <p> Philly Voice / Mar. 2021</p>
+    <br>
+    <a href="https://www.phillyvoice.com/philly-skateboarding-red-bull-documentary-nocturnal-kerry-getz-jahmir-brown-jake-wooten/" style="color: white; text-decoration: none ;border: 2px; outline: solid; outline-color: white; padding: 5px; ">Read More</a>
+  </div>
 
+  <div class="block">
+    <h3>Philly filmmaker immortalizes Love Park skateboarding in new documentary</h3>
+    <img src="documentary.jpg">
+    <p> Documentary captures the beginnings of Philly skate culture</p>
+    <p>Philly Voice / Feb.2018 </p>
+    <br>
+    <a href="https://www.phillyvoice.com/philly-filmmaker-immortalizes-love-park-skateboarding-new-documentary/" style="color: white; text-decoration: none ;border: 2px; outline: solid; outline-color: white; padding: 5px; ">Read More</a>
+  </div>
+
+</div>
+<div>
+    <div class="logo">
+  <img src="Skate Philly.png" style=" padding-left: 85%; width: 9%;">
+</div>
 </body>
-</html>   
-
-
+</html>  
